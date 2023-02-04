@@ -7,17 +7,42 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack{
+            Image("apple")
+            Text("Apple")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .background(Color.blue)
+                .foregroundColor(Color.white)
+            
+            
         }
-        .padding()
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
