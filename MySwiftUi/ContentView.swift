@@ -9,27 +9,33 @@ import SwiftUI
 
 
 struct ContentView: View {
-    @State private var showHello = false
+ 
+  @State private var showDetail = false
     var body: some View {
-      
-        
         VStack{
             
-            Toggle(isOn: $showHello) {
-                Text("Hello")
+            Button(action: {self.showDetail.toggle()}) {
+                Text("Show details")
                     .font(.largeTitle)
+                    .foregroundColor(.white)
+                    .fontWeight(.bold)
+                
             }
             .padding()
+            .background(Color.green)
+            .clipShape(RoundedRectangle(cornerRadius: 20))
             
-            if showHello{
-                Text("Xosh geldin !")
+            
+            if showDetail{
+                Text("Show details here ...")
                     .font(.largeTitle)
+                   
             }
+          
         }
+        
     }
 }
-
-
 
 
 
