@@ -9,43 +9,23 @@ import SwiftUI
 
 
 struct ContentView: View {
+    @State private var showHello = false
     var body: some View {
-   
-        ZStack{
+      
+        
+        VStack{
             
-            Image(systemName: "gamecontroller")
-                .resizable()
-                .frame(width: 150, height: 100)
-                .font(.largeTitle)
-                .padding(50)
-                .background(Color.green)
-                .foregroundColor(.white)
-                .clipShape(Circle())
+            Toggle(isOn: $showHello) {
+                Text("Hello")
+                    .font(.largeTitle)
+            }
+            .padding()
             
-            
-            
-            
-            
-            
-//            Image("apple")
-//                .resizable()
-//                .aspectRatio(contentMode: .fit)
-            
-            
-//            Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
-////            .lineLimit(1)
-////            .truncationMode(.tail)
-//            .font(.largeTitle)
-//                   .multilineTextAlignment(.center)
-//            .background(Color.pink)
-//            .foregroundColor(Color.white)
+            if showHello{
+                Text("Xosh geldin !")
+                    .font(.largeTitle)
+            }
         }
-        
-        
-
-            
-            
-
     }
 }
 
